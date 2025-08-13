@@ -63,7 +63,7 @@ public class BasicProblems {
         if (n == 1) return true;
         else if (n < 1 || n % x != 0) return false;
 
-        return isNPowerOfX(n / 2, x);
+        return isNPowerOfX(n / x, x);
     }
 
     public static void main(String[] args) {
@@ -72,6 +72,6 @@ public class BasicProblems {
         int[] arr = {1, 2, 3, 4, 5};
         System.out.println(sumOfArrayElements(arr));
         System.out.println(factorialOfN(5));
-        System.out.println(isNPowerOfX(6, 2));
+        System.out.println(isNPowerOfX(27, 3));
     }
 }
