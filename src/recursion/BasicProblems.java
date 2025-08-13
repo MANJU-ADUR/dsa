@@ -61,16 +61,17 @@ public class BasicProblems {
      */
     private static boolean isNPowerOfX(int n, int x) {
         if (n == 1) return true;
-        if (n % x != 0) return false;
+        else if (n < 1 || n % x != 0) return false;
 
-        return isNPowerOfX(n, x);
+        return isNPowerOfX(n / 2, x);
     }
 
     public static void main(String[] args) {
         // Demo calls
         System.out.println(sumOfFirstNElements(5));
         int[] arr = {1, 2, 3, 4, 5};
+        System.out.println(sumOfArrayElements(arr));
         System.out.println(factorialOfN(5));
-        System.out.println(isNPowerOfX(1, 2));
+        System.out.println(isNPowerOfX(6, 2));
     }
 }
